@@ -31,5 +31,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 WORKDIR /data
 
+RUN adduser -D reuse
+USER reuse
+
 ENTRYPOINT ["reuse"]
 CMD ["lint"]
