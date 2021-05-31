@@ -62,37 +62,10 @@ From git://git.yoctoproject.org/meta-java
 
 7) My own branch:
 git co master
-git co official-upstream/master-next
-git checkout -b 2020-02-13-master-next-as-zeus-3.0+
+git co official-upstream/master
+git checkout -b 2020-03-31-master
 git co master
 cd my-scripts
 ./push-all-to-github.sh
 
-8) apply patches
-
-cd meta-java
-
-git co 2020-02-13-master-next-as-zeus-3.0+
-
-stg init
-
-stg series
-
-stg import --mail ../meta-java-patches/2020-02-13-master-next-as-zeus-3.0+/0001-backported-features_check-distro_features_check-for-.patch
-
-import all patches
-
-...
-
-stg series 
-
-stg commit --all
-
-git log
-
-git co master
-
-9) push to my upstream
-
-my-scripts/push-all-to-github.sh
 
