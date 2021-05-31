@@ -23,7 +23,9 @@ docker rm -f ${ID_TO_KILL}
 echo "+ docker ps -a"
 docker ps -a
 
-echo "docker run -v <dir-to-check-on-host>:/workdir -it --entrypoint /bin/sh ${IMAGE_NAME}"
+# user/group id of current user
+USER_OPTIONS="-e TARGET_UID=$(id -u ${USER}) -e TARGET_GID=$(stat -c "%g" /home/${USER})"
+
+echo "docker run ${USER_OPTIONS} -v <dir-to-check-on-host>:/data -it --entrypoint /bin/sh ${IMAGE_NAME}"
 echo "e.g.:"
-echo "docker run -v /home/rber/projects/trainings/framework-3.0/intely-3.0:/data -it --entrypoint /bin/sh ${IMAGE_NAME}"
-echo "docker run -v /workdir/sources/meta-resy:/data -it --entrypoint /bin/sh ${IMAGE_NAME}"
+echo "docker run ${USER_OPTIONS} -v /workdir/sources/meta-resy:/data -it --entrypoint /bin/sh ${IMAGE_NAME}"
