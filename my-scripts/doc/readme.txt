@@ -63,7 +63,7 @@ From git://git.yoctoproject.org/meta-java
 7) My own branch:
 git co master
 git co official-upstream/master
-git checkout -b 2020-03-31-master
+git checkout -b 2021-05-31-master
 git co master
 cd my-scripts
 ./push-all-to-github.sh
