@@ -43,10 +43,10 @@ git branch -a
 git co master
 >> git remote -v
 
-official-upstream       git://git.yoctoproject.org/meta-java (fetch)
-official-upstream       git://git.yoctoproject.org/meta-java (push)
-origin  git@github.com:RobertBerger/meta-java.git (fetch)
-origin  git@github.com:RobertBerger/meta-java.git (push)
+official-upstream       git://github.com/fsfe/reuse-tool (fetch)
+official-upstream       git://github.com/fsfe/reuse-tool (push)
+origin  git@github.com:RobertBerger/reuse-tool.git (fetch)
+origin  git@github.com:RobertBerger/reuse-tool.git (push)
 
 >> git fetch official-upstream
 remote: Counting objects: 4043, done.
