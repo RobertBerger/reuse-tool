@@ -23,7 +23,7 @@ docker rm -f ${ID_TO_KILL}
 echo "+ docker ps -a"
 docker ps -a
 
-echo "dpcker run -v <dir-to-check-on-host>:/workdir -it --entrypoint /bin/sh ${IMAGE_NAME}"
+echo "docker run -v <dir-to-check-on-host>:/workdir -it --entrypoint /bin/sh ${IMAGE_NAME}"
 echo "e.g.:"
-echo "docker run -v /home/rber/projects/trainings/framework-3.0/intely-3.0:/workdir -it --entrypoint /bin/sh ${IMAGE_NAME}"
-echo "docker run -v /home/student/projects/resy-playground/sources/meta-resy/recipes-example:/workdir -it --entrypoint /bin/sh ${IMAGE_NAME}"
+echo "docker run -v /home/rber/projects/trainings/framework-3.0/intely-3.0:/data -it --entrypoint /bin/sh ${IMAGE_NAME}"
+echo "docker run -v /workdir/sources/meta-resy:/data -it --entrypoint /bin/sh ${IMAGE_NAME}"
