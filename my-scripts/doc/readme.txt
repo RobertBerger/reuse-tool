@@ -33,11 +33,11 @@ git fetch official-upstream
 
 git branch -a
 
-5) use specific upstream branch/commit and make own branch
-
-syntax: git fetch url-to-repo branchname:refs/remotes/origin/branchname
-
-git fetch git://github.com/fsfe/reuse-tool master:refs/remotes/origin/master
+#5) use specific upstream branch/commit and make own branch
+#
+#syntax: git fetch url-to-repo branchname:refs/remotes/origin/branchname
+#
+#git fetch git://github.com/fsfe/reuse-tool master:refs/remotes/origin/master
 
 6) Update from fsfe:
 git co master
